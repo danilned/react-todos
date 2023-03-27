@@ -1,0 +1,58 @@
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 75%;
+  height: calc(100% - 140px);
+  flex-grow: 1;
+  padding-bottom: 25px;
+  margin: {
+    top: 50px;
+    left: auto;
+    right: auto;
+  }
+  > .todo {
+    > .form-group {
+      flex-wrap: nowrap;
+    }
+    margin-bottom: 10px;
+    .check {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: fit-content;
+      .form-check-input {
+        transform: scale(2);
+        margin: 0;
+      }
+    }
+    .remove {
+      display: flex;
+      align-items: center;
+      width: 80px;
+    }
+    .todo-text {
+      flex-shrink: unset;
+      padding: 0px 50px;
+      > .form-control {
+        font-size: 15px;
+        margin-top: 4px;
+        padding: {
+          top: 3px;
+          bottom: 3px;
+        }
+      }
+      > button {
+        word-break: break-word;
+        height: 40px;
+        overflow-y: auto;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+
+  > .pagination-container {
+    margin-top: auto;
+  }
+}

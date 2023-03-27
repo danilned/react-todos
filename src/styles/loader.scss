@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: $loader-timeout;
+  background: #fff;
+  opacity: 0;
+  left: 0;
+  > svg {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-60%);
+    background: #fff;
+    display: block;
+  }
+}

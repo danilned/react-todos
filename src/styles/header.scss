@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+.header {
+  min-height: 50px;
+  display: flex;
+  position: relative;
+  padding: 0px 30px;
+  > .theme-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    > button {
+      transition: 0.5s;
+      > i {
+        height: fit-content;
+        color: #dbdbdb;
+        transition: 0.5s;
+      }
+      > .bi-brightness-high {
+        margin-top: -2px;
+        font-size: 30px;
+      }
+      > .bi-moon {
+        font-size: 25px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        border-radius: 2px;
+      }
+      &.sun::after {
+        width: 31px;
+        margin-right: -2px;
+      }
+      &.moon::after {
+        width: 28px;
+        margin-left: -2px;
+      }
+    }
+  }
+  > .pages {
+    display: flex;
+    gap: 24px;
+    flex-grow: 1;
+    align-items: center;
+    > a {
+      font-size: 20px;
+      text-decoration: none;
+      color: inherit;
+      &.active {
+        color: $indigo-200;
+      }
+    }
+  }
+}

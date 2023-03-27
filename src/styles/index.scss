@@ -1,0 +1,85 @@
+@import "./todos.scss";
+@import "./loader.scss";
+@import "./layout.scss";
+@import "./header.scss";
+@import "./about.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.clear-button {
+  outline: none;
+  background: none;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.cross-button {
+  flex-grow: 1;
+  button {
+    display: block;
+    margin: auto;
+    width: 75%;
+    max-width: 40px;
+    padding: 0;
+    aspect-ratio: 1/1;
+    > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      height: 0;
+      margin-top: -2px;
+    }
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &.login {
+    button,
+    label {
+      text-align: center;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pagination-container {
+  * {
+    user-select: none;
+  }
+  button {
+    padding-top: 4px;
+  }
+}
